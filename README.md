@@ -3,7 +3,7 @@
 Demonstrates a pattern of creating objects, editing objects, and sorting them, all
 on the same page.
 
-![](aajaxdemo.gif)
+![](ajaxdemo.gif)
 
 
 
