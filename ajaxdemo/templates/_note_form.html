@@ -1,0 +1,11 @@
+{% load bootstrap %}
+<form id="note-form" action="{{ post_url }}" method="post" class="ajax" data-replace="#note-form">
+    {% csrf_token %}
+    {{ form|bootstrap }}
+    <div class="mt-5">
+        <button class="btn btn-primary btn-block">
+            {% if note %}Update{% else %}Create{% endif %}
+            Note
+        </button>
+    </div>
+</form>

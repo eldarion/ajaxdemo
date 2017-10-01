@@ -1,0 +1,8 @@
+<a id="note-{{ note.pk }}"
+    data-id="{{ note.pk }}"
+    class="note ajax note-edit-link"
+    data-replace="#note-form"
+    href="{% url "ajax_notes_update" note.notebook.pk note.pk %}">
+    <i class="handle"></i>
+    {{ note.title }}
+</a>

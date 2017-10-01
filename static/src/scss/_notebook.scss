@@ -1,0 +1,45 @@
+body {
+    background-color: $gray-100;
+}
+.notebook-container {
+    width: 300px;
+    margin: 50px auto;
+    @extend .card;
+    h3 {
+        @extend .card-title;
+    }
+    form {
+        @extend .card-body;
+    }
+}
+
+.notes-container {
+    margin-top: 50px;
+    padding: 1.25rem;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+
+    .notes-list-container {
+        border-left: 1px solid rgba(0, 0, 0, 0.125);
+        margin-left: 10px;
+        padding-left: 20px;
+        #note-list {
+            @extend .list-group;
+            .note {
+                @extend .list-group-item;
+                @extend .list-group-item-action;
+                cursor: pointer;
+                i {
+                    @include icon(bars);
+                    margin-right: 5px;
+                    color: $gray-500;
+                }
+                &.sortable-ghost {
+                    background-color: theme-color-level('primary', -10);
+                }
+            }
+        }
+    }
+}

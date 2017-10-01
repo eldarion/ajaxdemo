@@ -1,0 +1,17 @@
+{% extends "site_base.html" %}
+
+{% block body %}
+<div class="row notes-container">
+    <div class="col notes-form-container">
+        {% include "_note_form.html" %}
+    </div>
+    <div class="col notes-list-container">
+        <h4>{{ notebook.name }} Notes</h4>
+        <div id="note-list" data-save-order-url="{% url "ajax_notes_update_order" notebook.pk %}">
+            {% for note in note_list %}
+                {% include "_note.html" %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
