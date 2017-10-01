@@ -1,5 +1,12 @@
 # ajaxdemo
 
+Demonstrates a pattern of creating objects, editing objects, and sorting them, all
+on the same page.
+
+![](aajaxdemo.gif)
+
+
+
 ## Getting Started
 
 Make sure you are using a virtual environment of some sort (e.g. `virtualenv` or
